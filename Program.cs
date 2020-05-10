@@ -414,7 +414,7 @@ namespace TicTacToe
             string req = "SELECT MAX(id) FROM game";
             MySqlCommand command2 = new MySqlCommand(req, conn);
             int idgame = int.Parse(command2.ExecuteScalar().ToString());
-            string query = $"INSERT INTO game_stats (idgame, playerX, playerO) VALUES ({idgame + 1}, ";
+            string query = $"INSERT INTO game_stats (idgame, playerX, playerO) VALUES ({idgame}, ";
             if (X_win == O_win) { query += "'draw', 'draw')"; } else
             {
                 if (X_win) { query += "'win', 'lose')"; } else { query += "'lose', 'win')"; }
