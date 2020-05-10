@@ -36,8 +36,6 @@ namespace TicTacToe
             Console.Clear();
 
 
-
-
             conn.Close();
         }
     }
